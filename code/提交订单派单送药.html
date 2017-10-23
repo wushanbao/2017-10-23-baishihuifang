@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>提交订单</title>
+    <style>
+
+          *{
+              margin: 0;
+              padding: 0;
+          }
+        .wrapper{
+            width: 100%;
+            height:666px;
+            background:white ;
+        }
+        #box{
+            height: 39px;
+            width: 100%;
+            margin-top: 10px;
+            background: white;
+            text-align: center;
+        }
+        .back img{
+
+            height: 25px;
+            width: 25px;
+            float: left;
+            line-height: 12px;
+
+        }
+        .rightFont img{
+            height:15px;
+            width: 25px;
+            float: right;
+            margin-top: -18px;
+
+            /*line-height: 12px;*/
+        }
+        .bg img{
+            width:100%;
+        }
+        .cancel{
+          height: 50px;
+          width: 100%;
+          background: deepskyblue;
+          outline: none;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+      <div id="box">
+          <div class="back"><img src="back.png" alt=""></div>
+          <span>拍单送药</span>
+          <div class="rightFont"><img src="1.png" alt=""></div>
+      </div>
+      <div class="bg">
+          <img src="delivery.png" alt="">
+      </div>
+      <footer>
+          <button class="cancel">取消订单</button>
+      </footer>
+  </div>
+</body>
+<script  type="text/javascript"  src="../js/jquery-3.2.1.min.js"></script>
+<script>
+    $(".back").click(function () {
+        window.location.href = "http://localhost:63342/practice%20code/code/拍单送药.html"
+    })
+    $(".cancel").click(function () {
+        window.location.href = "http://localhost:63342/practice%20code/code/我的抓药.html"
+    })
+</script>
+</html>

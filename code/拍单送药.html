@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>拍单送药</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <!--<link rel="stylesheet" href="./css/style2.css" type="text/css" />-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrapper{
+            width: 100%;
+            height:666px;
+            background:white ;
+        }
+        #box{
+            height: 39px;
+            width: 100%;
+            margin-top: 10px;
+            background: white;
+            text-align: center;
+        }
+        .back img{
+
+            height: 25px;
+            width: 25px;
+            float: left;
+            line-height: 12px;
+
+        }
+        .rightFont img{
+            height:15px;
+            width: 25px;
+            float: right;
+            margin-top: -18px;
+
+            /*line-height: 12px;*/
+        }
+        .nav img{
+            height: 62px;
+            width: 100%;
+            /*background: rgb(66,229,128);*/
+        }
+        .info_text{
+            margin:10px 0;
+            margin-left: 8px;
+            color: rgb(182,182,182);
+        }
+        .line{
+            border: solid 1px rgba(182,182,182,.05);
+        }
+        .box{
+            height: 120px;
+             width: 192px;
+            border-right: solid 1px rgba(182,182,182,.1);
+        }
+        .box img{
+            height: 100px;
+             width: 100px;
+            padding-top: 14px;
+            padding-left: 44px;
+
+        }
+        .Advertising{
+            height: 40px;
+            width: 100%;
+            background: rgb(246,246,246);
+            line-height: 40px;
+        }
+        .Advertising p {
+            color: rgb(206,206,206);
+           font-size: 12px;
+            margin-left: 10px;
+        }
+        .doctor{
+            height: 50px;
+            line-height: 50px;
+        }
+        .doctor span{
+            font-size: 12px ;
+            color: rgb(206,206,206);
+
+        }
+        .doctor_text{
+            margin-left: 10px;
+        }
+
+        .doctor input{
+            width: 200px;
+            border: none;
+            outline: none;
+            font-size: 12px;
+            color: rgb(206,206,206);
+        }
+        .last_line{
+            height: 5px;
+            background: rgb(246,246,246);
+        }
+        .address{
+            height: 85px;
+        }
+        .address p{
+            margin: 12px 0;
+            margin-left: 10px;
+        }
+        .doctor_box{
+           margin-left: 10px;
+            width: 90%;
+            /*background: deepskyblue;*/
+            border:solid 1px  blue;
+            border-radius: 3px;
+
+        }
+        .doctor_box p{
+            display: inline-block;
+        }
+       .box2{
+           height: 38px;
+           border:none;
+           width: 50%;
+           background-color:cornflowerblue;
+           outline: none;
+       }
+        .box3{
+            height: 38px;
+            border:none;
+            width:49%;
+            float: right;
+            padding-right: 10px;
+            background: white;
+            outline: none;
+        }
+        .info1{
+           padding:10px 10px 10px 10px;
+            color:rgb(196,196,196);
+            display: inline-block;
+            font-size: 12px;
+        }
+        .info{
+            position: relative;
+            color:rgb(196,196,196);
+            padding:15px 10px 10px 10px;
+            font-size: 12px;
+        }
+        .address_info img{
+            height: 15px;
+            width: 15px;
+            float: right;
+            margin-right: 10px;
+            margin-top: 10px;
+            opacity: .3;
+
+        }
+        .mark{
+            color: red;
+        }
+        .footer{
+            width: 100%;
+            height: 110px;
+            background:rgb(246,246,246);
+        }
+        .doctor_context{
+            height: 140px;
+        }
+        .footer img{
+            height: 12px ;
+            width: 12px;
+        }
+        .footer span{
+            font-size: 12px;
+
+        }
+        .footer_one{
+            margin-left: 12px;
+            height: 40px;
+        }
+        .footer_two button{
+            height: 70px;
+            width: 100%;
+            background:rgb(26,139,211) ;
+            color: white;
+        }
+        #counter{
+           position: absolute;
+            top: 70px;
+            right: 0;
+            margin-bottom: 20px;
+        }
+        #counter input{
+            width: 97px;
+            height: 30px;
+            border-radius: 5px;
+            background: gainsboro;
+            color: black;
+            margin-right: 35px;
+            margin-top: 11px;
+            outline: none;
+        }
+        #counter p{
+           margin-left: 36px;
+            font-size: 14px;
+        }
+        #counter1{
+            height: 30px;
+            width: 30px;
+            margin-top:11px;
+            position: absolute;
+            left: -34px;
+
+        }
+        #counter2{
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            top: 28px;
+            left: 103px;
+
+        }
+        .doctor_info{
+            height: 120px;
+             width: 100%;
+            background:rgb(242,242,242);
+            display: none;
+        }
+        .doctor_info p:first-child {
+            text-align: center;
+            background:white;
+            height: 30px;
+            font-weight: bold;
+        }
+        .info input{
+            border: none;
+            outline: none;
+        }
+        .close{
+            float: right;
+            margin-right: 10px;
+            font-size: 17px;
+            color: gainsboro;
+        }
+        .doctor_detial{
+            margin-left: 15px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .doctor_info input{
+            border: none;
+            border-bottom: solid 1px;
+            outline: none;
+            background: rgb(242,242,242);
+            width: 55px;
+        }
+        .total_num {
+            color: red;
+        }
+        .doctor_info p:last-child{
+           margin-top: 10px;
+           margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body style="overflow:scroll;overflow-x:hidden">
+
+  <div id="wrapper">
+      <div id="box">
+          <div class="back"><img src="back.png" alt=""></div>
+          <span>拍单送药</span>
+          <div class="rightFont"><img src="1.png" alt=""></div>
+      </div>
+       <div class="header">
+           <div class="nav">
+               <img src="nav.png" alt="">
+           </div>
+           <div class="info">
+               <div class="info_text"><p>处方信息</p></div>
+               <div class="line"></div>
+               <div class="box">
+                   <img src="shop.png" alt="">
+               </div>
+               <div  id="counter">
+                   <p>副数</p>
+                   <img id="counter1" src="even.png" alt="">
+                   <input type="text" placeholder="0" class="ylsj-num">
+                   <img id="counter2" src="add.png" alt="">
+               </div>
+               <div class="Advertising"><p>所以品种均是精选药材，货比三家，优质价廉，诚信服务</p></div>
+               <div class="doctor">
+                   <div class="doctor_text">
+                   <span>开方医生:</span>
+                   <input placeholder="请输入医生名字"/>
+                   </div>
+               </div>
+               <div class="last_line"></div>
+           </div>
+           <div></div>
+           <div class="address">
+               <p>代煎药确认</p>
+               <div class="doctor_box">
+                   <button class="box2">代煎药(￥0.00/副)</button><button class="box3">自己煎药</button>
+               </div>
+           </div>
+           <div class="last_line"></div>
+           <div class="doctor_info" >
+               <p>代煎药<span class="close">x</span></p>
+               <div class="doctor_detial">
+               <span>每日几袋</span>
+               <input type="number">&nbsp;&nbsp;&nbsp;&nbsp;
+               <span class="total_num">共30袋</span>
+               <p>(通常1副药3袋，具体可以咨询你的开方医生。另：每袋默认是200毫升，特殊要求请在底部备注)</p>
+             </div>
+           </div>
+           <div class="address_info">
+                 <p class="info1">收货人信息</p>
+                 <img src="more.png" alt="">
+                 <p class="info">姓名： <input type="text" class="ui-keyboard-input"></p>
+                 <p class="info"><span class="mark">*</span>手机号码:<input type="text" class="keyword"></p>
+                 <p class="info">所在地区  <input type="text" class="address_info2"></p>
+                 <img src="more.png" alt="">
+                 <p class="info">详细地址:<input type="text" class="address_info2"></p>
+               <div class="last_line"></div>
+                <div  class="doctor doctor_context">
+                   <div class="doctor_text">
+                       <span id="context">备注:</span>
+                       <input placeholder="其他要求请备注，不超过100字！"/>
+                   </div>
+               </div>
+           </div>
+       </div>
+      <div class="footer">
+          <div class="footer_one">
+           <img src="choose.png" alt="">
+           <span>以阅读并同意</span>
+           <span>《中药饮片代煎及药品配送服务协议》</span>
+          </div>
+           <div class="footer_two">
+               <button>提交订单</button>
+           </div>
+
+      </div>
+  </div>
+  <script  type="text/javascript" src="../js/jquery-3.2.1.min.js" ></script>
+  <script  type="text/javascript"  src="../js/keyboard.js"></script>
+  <script  type="text/javascript"  src="../js/index.js"></script>
+  <script>
+    $(".back").on("click",function () {
+        window.location.href = "http://localhost:63342/practice%20code/code/%E6%B1%87%E6%96%B9%E4%BA%91%E4%BC%9A%E6%89%80.html"
+    })
+    // 计数器
+    $(function(){
+        var $ylsj_sn=$('#counter');/*定义变量名*/
+        var i=2;/*定义初始值*/
+        var $min=1;/*最小值*/
+        var $max=99;/*最大值，实际过程中是取库存进行后续判断*/
+
+        /*减少按钮功能*/
+        $ylsj_sn.find('#counter1').on('click',function(){
+            i=$(this).siblings('.ylsj-num').val();//判断此时i的输入值
+            if(i>$min){i--};
+            $(this).siblings('.ylsj-num').val(i);/*显示框传值*/
+        });
+        /*增加按钮功能*/
+        $ylsj_sn.find('#counter2').on('click',function(){
+            i=$(this).siblings('.ylsj-num').val(); //判断此时i的输入值
+            if(i<$max){i++};
+            $(this).siblings('.ylsj-num').val(i);
+        });
+    });
+
+    //代煎药 显示隐藏
+    $(".box2").click(function(){
+        var div = $(".doctor_info");
+        if ( div.css("display") === "none" ) {
+            div.show();
+        } else {
+            div.hide();
+        }
+    })
+    $(".close").click(function () {
+        var div = $(".doctor_info");
+        div.hide()
+    })
+      //提交订单跳转派送页面
+      $(".footer_two").click(function () {
+          window.location.href="http://localhost:63342/practice%20code/code/提交订单派单送药.html"
+      })
+
+      //配合input foucus  和blur事件触发软键盘 和地区选择
+    $(".keyword").focus(function () {
+        $.fn.add()
+
+    })
+    $(".address_info2").mPicker({
+        //级别
+        level:2,
+        //需要渲染的json，二级联动的需要嵌套子元素，有一定的json格式要求
+        dataJson:dataJson,
+        //true:联动
+        Linkage:true,
+        //显示行数
+        rows:6,
+        //默认值填充
+        idDefault:true,
+        //分割符号
+        splitStr:'-',
+        //头部代码
+        header:'<\div class="mPicker-header">请选择你的地区<\/div>',
+        confirm:function(){
+            //更新json
+            this.container.data('mPicker').updateData(level3);
+            //console.info($('.select-value').data('value1')+'-'+$('.select-value').data('value2'));
+        },
+        cancel:function(){
+            //console.info($('.select-value').data('value1')+'-'+$('.select-value').data('value2'));
+        }
+    })
+ //键盘
+
+
+
+  </script>
+
+</body>
+</html>

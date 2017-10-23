@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>汇方云会所</title>
+    <style>
+         *{
+             margin: 0;
+             padding: 0;
+
+         }
+         .bg img{
+             width: 100%;
+         }
+        .footer{
+            position: fixed;
+            bottom: 0;
+            height:80px ;
+            background-color: deepskyblue;
+            width: 100%;
+
+        }
+        .keyword{
+            width: 48px;
+            height: 55px;
+            margin-top: 10px;
+            margin-left: 15px;
+
+        }
+        .secondOne{
+            position: relative;
+            height:55px;
+            width:120px ;
+            float: right;
+            margin-right:145px;
+            margin-top: 18px;
+        }
+        .secondOne img{
+           height: 38px;
+           width: 30px;
+        }
+        .secondOne span{
+            position: absolute;
+            top: 8px;
+            font-size: 18px;
+        }
+        .lastOne{
+            position: absolute;
+            height:55px;
+            width:120px ;
+            right: 0;
+            bottom: 6px;
+        }
+        .lastOne img{
+            height: 38px;
+            width: 30px;
+        }
+        .lastOne span{
+            position: absolute;
+            top: 8px;
+            font-size: 18px;
+
+        }
+    </style>
+</head>
+<body>
+   <div  id="wrapper">
+       <div class="bg"><img src="u1391.png" alt=""></div>
+       <div class="footer">
+            <img class="keyword" src="keyword.png" alt="">
+            <div class="secondOne">
+                 <img src="morel2.png" alt="">
+                 <span>看病抓药</span>
+            </div>
+            <div class="lastOne">
+                 <img src="morel2.png" alt="">
+                 <span>我的订单</span>
+            </div>
+       </div>
+
+   </div>
+</body>
+<script  src="../js/jquery-3.2.1.min.js"></script>
+<script>
+    $(".secondOne").click(function () {
+        window.location.href = "http://localhost:63342/practice%20code/code/%E6%8B%8D%E5%8D%95%E9%80%81%E8%8D%AF.html?_ijt=saipga13eiso2efl388572oqa2"
+
+    })
+
+   $(".lastOne").click(function () {
+       window.location.href = "http://localhost:63342/practice%20code/code/%E6%88%91%E7%9A%84%E8%AE%A2%E5%8D%95.html"
+   })
+</script>
+</html>
